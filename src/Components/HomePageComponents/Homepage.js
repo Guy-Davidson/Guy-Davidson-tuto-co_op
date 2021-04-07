@@ -105,7 +105,9 @@ const Homepage = (props) => {
                 size='2em'
                 className='heart'
                 onClick={() => {
-                    nextPlay();
+                    if(isPlaying && clicksArr.length === 1){
+                        nextPlay();
+                    }                    
                     setIsResultFavorited(!isResultFavorited);
                     addCityFav();
                 }}/> 
