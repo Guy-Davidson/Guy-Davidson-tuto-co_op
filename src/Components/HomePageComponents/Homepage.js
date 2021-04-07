@@ -121,6 +121,7 @@ const Homepage = (props) => {
                 <div className='home-search-heart'>
                     <div className='home-search'>
                         <SearchCity 
+                        isPlaying={isPlaying}
                         inputClick={inputClick}
                         homeGetCityKey={homeGetCityKey}
                         addCityFav={addCityFav}/>

@@ -19,8 +19,10 @@ const SearchCity = (props) => {
                 <FiSearch className='search-icon'/>
                 <input  id='cityTextField' type="search" placeholder="Search..." 
                 onClick={() => {
-                    onSearch(props.inputClick())
-                    document.getElementById("cityTextField").value = props.inputClick();
+                    if(props.isPlaying){
+                        onSearch(props.inputClick())
+                        document.getElementById("cityTextField").value = props.inputClick();
+                    }                    
                 }}
                 onChange={(e) => onSearch(e.target.value)}/>                                
             </div>                        
