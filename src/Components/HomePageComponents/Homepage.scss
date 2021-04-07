@@ -1,0 +1,53 @@
+@import '../../variables';
+
+.home-page {    
+           
+    color: white;    
+    text-align: center;
+    display: flex;
+    flex-direction: column;       
+    justify-content: start;
+        
+    .welcome {        
+        font-family: 'Berkshire Swash', cursive;
+        margin: 5vh auto 5vh auto;
+        font-size: 45px;        
+    }
+
+    .home-search-heart {
+        display: flex;
+        flex-direction: row;        
+        align-items: center;        
+        justify-content: center;                
+
+        .home-search{                        
+            width:40%
+        }
+
+        .heart {
+            color:#DA3633;                       
+    
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .play {
+        position: absolute;
+        bottom: 5vh;
+        right: 2vw;
+
+
+        button {
+            padding: 10px;
+            border-radius: 7px;
+            margin-right: 30px;
+            background-color: $color;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.nav-bar {
+    margin: auto;
+    padding: 10px;
+    color: white;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+
+    .nav-button {
+        margin: auto 8px;
+        font-size: 24px;  
+        
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

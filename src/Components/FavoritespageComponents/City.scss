@@ -1,0 +1,58 @@
+@import '../../variables'; 
+
+.cities-wrap {
+    display: inline-flex;
+    
+    .city {            
+        padding: 10px;
+        margin: 10px;
+        color: $color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+        
+        &:hover {
+            color: $hightLightColor;                  
+        }
+    
+        .title{
+            padding: 40px;
+            padding-top: 0;        
+    
+            .name {
+                font-size: 24px;  
+                margin-right: 5px;          
+            }
+    
+            .country {
+                font-size: 18px;
+            }    
+        }
+      
+        .temp {        
+            min-height: 10em;        
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 20px;
+            margin: auto;
+    
+            .max {            
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                .temp-number-wrap {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;  
+                    white-space: pre-wrap;  
+                }
+                .icon {
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,31 @@
+@import '../../variables'; 
+
+.five-days-wrap {
+    padding: 20px;
+    color: $color;
+
+    .day-night-switch{        
+        width: 20%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;        
+
+        .icon {
+            margin: auto 5px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .five-days {
+    
+        display: flex;
+        justify-content: space-around;
+        width: 75%;
+        margin: auto;        
+    
+    }
+}

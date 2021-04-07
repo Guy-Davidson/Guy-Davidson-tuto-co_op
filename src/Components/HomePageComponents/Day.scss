@@ -1,0 +1,59 @@
+@import '../../variables'; 
+
+.day {    
+    padding: 10px;
+    margin: 10px;
+    color: $color;
+
+    &:hover {
+        color: $hightLightColor;
+        cursor: pointer;        
+    }
+
+    .name {
+        font-size: 24px;
+        padding: 40px;
+        padding-top: 0;
+    }
+
+    .temp {        
+        min-height: 10em;        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 20px;
+
+        .max {            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .temp-number-wrap {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;  
+                white-space: pre-wrap;  
+            }
+            .icon {
+                margin: auto;
+            }
+        }
+
+        .min {            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .temp-number-wrap {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;  
+                white-space: pre-wrap;  
+            }
+
+            .icon {
+                margin: auto;
+            }
+        }
+    }
+}

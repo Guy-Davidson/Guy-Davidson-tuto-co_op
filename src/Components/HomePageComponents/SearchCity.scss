@@ -1,0 +1,48 @@
+@import '../../variables'; 
+
+.search-city {
+
+    display: flex;
+    justify-content: space-between;    
+    margin: auto;
+    padding: 20px;
+    font-size: 22px;        
+    color: $color;   
+
+    .search-item {
+        margin: auto 12px;
+    }
+
+    .choose {        
+        white-space: nowrap;
+    }
+
+    .search-wrap {
+        border: none;
+        border-bottom: 1px solid grey;
+        display: flex;
+        justify-content: space-between;        
+        width: 100%;
+
+        .search-icon {
+            margin-right: 5px;
+            color: $color;
+        }
+        
+        input {
+            color: $color;       
+            width: 100%;
+            text-overflow: ellipsis;
+            display: inline-block;                                          
+            background: transparent;         
+            outline: 0;         
+            font-size: 18px;    
+            resize: none;    
+            border: none;       
+    
+            &::placeholder  {
+                color: $color;
+            }
+        }
+    }
+}
