@@ -3,7 +3,7 @@ import './Homepage.scss'
 import SearchCity from './SearchCity'
 import FiveDays from './FiveDays'
 import { createApiClient } from '../../api/api';
-import {writeData, readData, initLocalData} from './LocalStorage';
+import {writeData, readData} from './LocalStorage';
 import { BiHeart } from 'react-icons/bi';
 import { FaHeart } from "react-icons/fa";
 
