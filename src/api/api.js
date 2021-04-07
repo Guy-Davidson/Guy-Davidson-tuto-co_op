@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_ROOT_PATH = 'http://localhost:3232';
+
 const API_KEY = '7fB5nhJLHse1DTqkRbNfwayem9GB6GiQ';
 const CITY_SEARCH_ENDPOINT = 'http://dataservice.accuweather.com/locations/v1/search';
 const FIVE_DAYS_ENDPOINT = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/'

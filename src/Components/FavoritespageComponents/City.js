@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react' 
+import React, { useState } from 'react' 
 import './City.scss'
 import { weatherIcon } from '../../api/WeatherIcons'
 
