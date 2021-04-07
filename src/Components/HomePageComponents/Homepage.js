@@ -76,7 +76,8 @@ const Homepage = (props) => {
     const homeGetCityKey = async (val) => {  
         let searchResult = null;        
         searchResult = await api.getCityKey(val);
-        setResult(searchResult[0]);          
+        setResult(searchResult[0]);     
+        setIsResultFavorited(false);
     }
 
     const renderFiveDays = () => {                    
