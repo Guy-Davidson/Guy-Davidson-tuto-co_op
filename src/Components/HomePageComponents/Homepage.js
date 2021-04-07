@@ -7,7 +7,7 @@ import {writeData, readData, initLocalData} from './LocalStorage';
 import { BiHeart } from 'react-icons/bi';
 import { FaHeart } from "react-icons/fa";
 
-const clicksArr = ["homeTab", "cityTextField", "isFavoriteBtn"];
+const clicksArr = ["homeTab", "cityTextField", 'isFavoriteBtn'];
 
 const api = createApiClient();
 
@@ -16,16 +16,16 @@ const Homepage = (props) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isResultFavorited, setIsResultFavorited] = useState(false);
 
-    const homeClick = () => {                
-        const elm = document.getElementById(clicksArr[0]);
+    const nextPlay = () => {
+        const elm = document.getElementById(clicksArr[0]);        
         elm.style.backgroundColor = 'transparent';
-
         clicksArr.shift();
         onPlay();
     }
 
     const inputClick = () => {
-        if(isPlaying){
+        if(isPlaying && clicksArr.length === 2){
+            nextPlay()
             return "Tel Aviv"
         } else {
             return ""
@@ -42,11 +42,9 @@ const Homepage = (props) => {
         }
     }
 
-    const onPlay = () => {   
-        console.log(clicksArr);
-        if(clicksArr.length){
-            console.log(clicksArr[0]);
-            const elm = document.getElementById(clicksArr[0]);
+    const onPlay = () => {           
+        if(clicksArr.length){            
+            const elm = document.getElementById(clicksArr[0]);            
             elm.style.backgroundColor = '#023e8a';        
         }
     }
@@ -56,8 +54,6 @@ const Homepage = (props) => {
             onPlay()
         }
     }, [isPlaying])
-
-
 
 
     const addCityFav = () => {
@@ -109,6 +105,7 @@ const Homepage = (props) => {
                 size='2em'
                 className='heart'
                 onClick={() => {
+                    nextPlay();
                     setIsResultFavorited(!isResultFavorited);
                     addCityFav();
                 }}/> 
@@ -137,7 +134,7 @@ const Homepage = (props) => {
                 <button onClick={togglePlay}>
                     Play!                    
                 </button>
-                {props.homeBeenPlayed && homeClick()}
+                {clicksArr.length === 3 &&  props.homeBeenPlayed && nextPlay()}
             </div>
         </div>
     )
